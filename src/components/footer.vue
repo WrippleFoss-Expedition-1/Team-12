@@ -1,13 +1,15 @@
 <template>
-    <div style="color:cornflowerblue;" class="bg-dark">
-        <div class="container">
+    <div style="background: black" class="text-primary">
+        <footer class="container" style="bottom: 0;position: relative">
             <div class="row pt-3">
                 <div class="col-md-4">
                     <!-- put somwthing  -->
                 </div>
                 <div class="col-md-4">
                     <div class="flip">
-                        hire me
+                        <router-link :to="{ name: 'contact' }">
+                            hire me
+                        </router-link>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -23,7 +25,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
 </template>
 

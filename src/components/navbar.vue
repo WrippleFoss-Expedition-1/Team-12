@@ -1,10 +1,10 @@
 <template>
-    <nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-md fixed-top" style="background: black">
         <div class="container-fluid">
             <div class="navbar-header animated bounceInRight" >
                 <a class="navbar-brand" href="/">{{ brand }}</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    aria-label="Toggle navigation" style="background : cornflowerblue">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
@@ -25,7 +25,7 @@
 export default {
   data() {
     return {
-      brand: 'NAME', //prefer to put name in caps
+      brand: 'SHUBHAM KAKKAR', //prefer to put name in caps
       NameRoutes: ["portfolio", "freebies", "about", "contact"],
       Names: ["My Work", "FreeBies", "About Me", "Contact"]
     };
