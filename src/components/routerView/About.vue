@@ -1,75 +1,58 @@
 <template>
-<section id="wrapper"  style="margin:5% 0">
-    <div class="container">
+<section id="wrapper" class="px-3">
+    <div class="container pt-5">
         <div class="row">
-            <div class="col-sm-6 animated fadeInRight">
+            <div class="col-md-6 d-none d-md-block animated fadeInRight">
                 <img src="" alt="MyImage">
             </div>
-            <div class="col-sm-6 animated fadeInLeft" style=" background: black ;">
-                <div class="row pb-2 pt-2" style="padding-top:15px; color: white">
-                    Contact
+            <div class="col-md-6 animated fadeInLeft wrapper">
+                <div class="row customDesign">
+                    <div class="container">
+                        <div class="row py-2 heading">
+                            Professional Experiance
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                            <div class="col" id="professionalExp-Internship">
+                                <div v-for="(professionalExpInternship, index) in professionalExperianceInternship" :key="index">
+                                    <div class="row pt-3">
+                                        <div class="col-3 offset-6" id="from" style="text-align:right"> {{ professionalExpInternship.from }} </div>
+                                        <div class="col-3" id="to" style="text-align:right"> {{ professionalExpInternship.to }} </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8" id="company_name">
+                                            {{ professionalExpInternship.company_name }}
+                                        </div>
+                                        <div class="col-sm-4" id="location">
+                                            {{ professionalExpInternship.location }}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col" id="profile">
+                                            {{ professionalExpInternship.pr_profile }}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col text-center pt-2" id="work_Description">
+                                            {{ professionalExpInternship.work_Description }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="row customDesign">
-                    <div class="col">
-                        <div class="row">
-                            <div id="email" class="col pt-3">
-                                <span>
-                                    Mail To:
-                                </span>
-                                <span>
-                                    <a :href=" 'mailto:' + email " style="color: white !important">
-                                        {{ email}}
-                                    </a>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!-- <div id="number" class="col pt-3"> {{ number }}</div>  -->
-                    <!-- your choice to add -->
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="row customDesign border">
-                    <div class="row pb-2 pt-2" style="width:100%;margin:auto;">
-                        Professional Experiance
-                    </div>
-                    <div class="col" id="professionalExp-Internship">
-                        <div v-for="(professionalExpInternship, index) in professionalExperianceInternship" :key="index">
-                            <div class="row pt-3">
-                                <div class="col-sm-2 offset-sm-8" id="from" style="text-align:right"> {{ professionalExpInternship.from }} </div>
-                                <div class="col-sm-2" id="to"> {{ professionalExpInternship.to }} </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-8" id="company_name">
-                                    {{ professionalExpInternship.company_name }}
-                                </div>
-                                <div class="col-sm-4" id="location">
-                                    {{ professionalExpInternship.location }}
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col" id="profile">
-                                    {{ professionalExpInternship.pr_profile }}
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col text-center pt-2" id="work_Description">
-                                    {{ professionalExpInternship.work_Description }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row customDesign border">
-                    <div class="row pb-2 pt-2" style="width:100%;margin:auto;">
+                    <div class="row py-2 heading">
                         College
                     </div>
                     <div class="col" id="EdCollege">
                         <div v-for="(EdCollege, index) in Higher_Education" :key="index">
                             <div class="row  pt-3">
-                                <div class="col-sm-2 offset-sm-8" id="from" style="text-align:right"> {{ EdCollege.from}} </div>
-                                <div class="col-sm-2" id="to">{{ EdCollege.to }} </div>
+                                <div class="col-3 offset-6" id="from" style="text-align:right"> {{ EdCollege.from}} </div>
+                                <div class="col-3" id="to" style="text-align:right">{{ EdCollege.to }} </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8" id="college_name">
@@ -92,8 +75,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row customDesign border">
-                    <div class="row  pb-2 pt-2" style="width:100%;margin:auto;">
+                <div class="row customDesign">
+                    <div class="row py-2 heading">
                         School
                     </div>
                     <div class="col" id="EdSchool">
@@ -104,7 +87,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-4 offset-sm-8" id="to">Passing Year {{ EdSchool.to }} </div>
+                                <div class="col-6 offset-6 text-right" id="to">Passing Year {{ EdSchool.to }} </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-8" id="school_name">
@@ -120,8 +103,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row customDesign border" style="margin-bottom:0 !important;">
-                    <div class="row pb-2 pt-2" style="width:100%;margin:auto">
+                <div class="row customDesign" style="margin-bottom:0 !important;">
+                    <div class="row py-2 heading" style="width:100%;margin:auto">
                         Miscellaneous
                     </div>
                     <div class="col" id="miscellaneous">
@@ -220,10 +203,42 @@ export default {
 </script>
 
 <style scoped>
+#wrapper{
+    background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+    padding-top:5%; 
+    padding-bottom:1%;
+}
 .customDesign{
-    color:white;
     padding-bottom: 3%;
     padding-top: 3%;
     border-bottom: 1px solid black !important;
 }
+.wrapper{
+    background: white; 
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+     
+}
+
+.heading{
+   text-decoration: underline;
+   text-transform: uppercase;
+   justify-content: center;
+   margin: auto;
+   width: 100%;
+   color: teal
+}
+
+#from,
+#to{
+    color: red;
+}
+
+#company_name{
+    color: blue
+}
+
+#profile{
+    color: royalblue;
+}
+
 </style>
